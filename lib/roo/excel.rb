@@ -276,7 +276,7 @@ class Roo::Excel < Roo::Base
   # way formula stores the value
   def read_cell_content(row, idx)
     cell = row.at(idx)
-    cell = row[idx] if row[idx].class == Spreadsheet::Link
+    # cell = row[idx] if row[idx].class == Spreadsheet::Link
     cell = cell.value if cell.class == Spreadsheet::Formula
     cell
   end
